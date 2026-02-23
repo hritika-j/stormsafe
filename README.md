@@ -2,7 +2,9 @@
 
 **Should you step out? StormSafe decides for you.**
 
-A NYC storm decision app that combines real-time weather, live MTA alerts, and AI reasoning to tell you whether your trip is worth it — and exactly why.
+New Yorkers don't stay home. A little snow, some wind, delayed trains ,one of it is supposed to stop you. But sometimes you're standing at the door at 10pm wondering if the trip across town is actually worth it, and you just need someone to tell you straight.
+
+That's StormSafe. It combines real-time weather, live MTA alerts, and AI reasoning to make the call for you — and tell you exactly why.
 
 ---
 
