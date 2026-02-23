@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes snowDrift {
+  0%   { transform: translateY(-4px) translateX(0px);  opacity: 0; }
+  12%  { opacity: 1; }
+  88%  { opacity: 0.4; }
+  100% { transform: translateY(64px) translateX(10px); opacity: 0; }
+}
+
+@keyframes shimmer {
+  0%   { transform: translateX(-150%); }
+  100% { transform: translateX(150%); }
+}
