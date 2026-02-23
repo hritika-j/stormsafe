@@ -8,7 +8,7 @@
  * @param {Object|null} destCoordsHint - { lat, lng } already known from SearchBox; skips geocoding when provided
  */
 export async function fetchTravelData(originCoords, destination, weatherSeverity = 'none', destCoordsHint = null) {
-  const mapboxKey = import.meta.env.VITE_MAPBOX_KEY;
+  const mapboxKey = import.meta.env.VITE_MAPBOX_TOKEN;
 
   if (!mapboxKey) {
     console.warn('Mapbox API key not configured');
@@ -179,6 +179,9 @@ async function getDirections(originCoords, destCoords, mapboxKey) {
     }
 
     const data = await response.json();
+    console.log('[Mapbox] raw routes count:', data.routes?.length);
+    console.log('[Mapbox] route[0] duration (s):', data.routes?.[0]?.duration, '| distance (m):', data.routes?.[0]?.distance);
+    console.log('[Mapbox] route[0] step count:', data.routes?.[0]?.legs?.[0]?.steps?.length);
 
     if (!data.routes || data.routes.length === 0) {
       console.warn('No route found');

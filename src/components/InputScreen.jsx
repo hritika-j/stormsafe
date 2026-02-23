@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { SearchBox } from '@mapbox/search-js-react'
 
-const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_KEY
+const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN
 
 const TIME_OPTIONS = [
   { value: 'now',   label: 'Now' },
