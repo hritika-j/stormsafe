@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import InputScreen from './components/InputScreen'
 import LoadingScreen from './components/LoadingScreen'
 import ResultScreen from './components/ResultScreen'
@@ -62,7 +63,7 @@ export default function App() {
     }
   }
 
-  if (screen === 'loading') return <LoadingScreen />
-  if (screen === 'result') return <ResultScreen result={result} onReset={() => setScreen('input')} />
-  return <InputScreen onSubmit={handleSubmit} />
+  if (screen === 'loading') return <><LoadingScreen /><Analytics /></>
+  if (screen === 'result') return <><ResultScreen result={result} onReset={() => setScreen('input')} /><Analytics /></>
+  return <><InputScreen onSubmit={handleSubmit} /><Analytics /></>
 }
